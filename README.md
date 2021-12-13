@@ -8,9 +8,9 @@ Rest services for the counting chickens app. Basic rest functions that put thing
 4. Other Counting chickens functionality
 
 ### Built With
-[Node](https://node.js/)
-[Koa](https://koajs.com/)
-[Typescript](https://www.typescriptlang.org/)
+* [Node](https://node.js/)
+* [Koa](https://koajs.com/)
+* [Typescript](https://www.typescriptlang.org/)
 
 ## Getting Started
 1. npm install
