@@ -4,6 +4,7 @@ import * as Router from "koa-router";
 import * as logger from "koa-logger";
 import * as json from "koa-json";
 import { getMenuItemsById, getMenuItemsByCategory, getMenuItemsByItemType} from "./get-menu-items";
+import { URLSearchParams } from "url";
 
 var app = new Koa();
 const router: Router = new Router();
@@ -14,14 +15,18 @@ const router: Router = new Router();
 //   await next();
 // });
 
-const routerOpts: Router.IRouterOptions = {
-  prefix: '/menu'
-}
-
-router.get('/:id', async(ctx:Koa.Context) =>{
-  console.log("in get menu call");
+router.get('/menu/:id', async(ctx:Koa.Context) =>{
   let resturantId = ctx.params.id;
-  ctx.body=getMenuItemsById(resturantId);
+  console.log("in get menu call params id value: "+resturantId);
+  if (ctx.params.category != null && ctx.params.itemType==null){
+    ctx.body=getMenuItemsByCategory(resturantId, ctx.params.category)
+  }
+  else if (ctx.params.itemType!=null){
+    ctx.body=getMenuItemsByItemType(resturantId, ctx.params.itemType);
+  }
+  else{
+    ctx.body=getMenuItemsById(resturantId)
+  }  
 });
 
 
