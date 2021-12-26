@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "tslint --project tsconfig.json --format stylish",
+    "build": "tsc",
+    "serve": "ts-node index.js",
+    "start": "nodemon"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +20,11 @@
     "koa-router": "^10.1.1"
   },
   "devDependencies": {
-    "@types/node": "^16.11.12"
+    "@types/node": "^16.11.12",
+    "nodemon": "^2.0.15",
+    "ts-node": "^10.4.0",
+    "tslint": "^5.20.1",
+    "tslint-config-airbnb": "^5.11.2",
+    "typescript": "^3.9.10"
   }
 }
