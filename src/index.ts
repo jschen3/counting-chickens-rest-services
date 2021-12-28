@@ -1,19 +1,16 @@
 import * as Koa from "koa";
 import * as Router from "koa-router";
-
-import * as logger from "koa-logger";
-import * as json from "koa-json";
 import { getMenuItemsById, getMenuItemsByCategory, getMenuItemsByItemType} from "./get-menu-items";
-import { URLSearchParams } from "url";
+
 
 var app = new Koa();
 const router: Router = new Router();
 
-// router.get('/', async (ctx, next) => {
-//   ctx.body = { msg: "Hello world!" };
+router.get('/', async (ctx, next) => {
+  ctx.body = { msg: "Hello world!" };
 
-//   await next();
-// });
+  await next();
+});
 
 router.get('/menu/:id', async(ctx:Koa.Context) =>{
   let resturantId = ctx.params.id;

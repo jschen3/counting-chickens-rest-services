@@ -1,10 +1,3 @@
-/*
-    /menuItems/${resturantId}
-
-    /menuItems/${resturantId}?category=
-
-
-*/
 const resturantMenu: any[]= [
 	{
 		name: 'sesame chicken',
@@ -27,7 +20,7 @@ const resturantMenu: any[]= [
 			'Specialty item of the restaurant, frequenty goes out of stock, seasonal item',
 		ranking: 1,
 		restaurantName: 'Sample Resturant',
-		restaurantId: 1,
+		restaurantId: '29b70410-629e-41f0-bd3a-2644e336c912',
 		visible: true,
 	},
 	{
@@ -55,7 +48,7 @@ const resturantMenu: any[]= [
 		notes: 'Lemons are fanstastic. Allergies to peanuts',
 		ranking: 2,
 		restaurantName: 'Sample Restaurant',
-		restaurantId: 1,
+		restaurantId: '29b70410-629e-41f0-bd3a-2644e336c912',
 		visible: true,
 	},
 	{
@@ -77,7 +70,7 @@ const resturantMenu: any[]= [
 		notes: 'fried, spicy',
 		ranking: 3,
 		restaurantName: 'Sample Resturant',
-		restaurantId: 1,
+		restaurantId: '29b70410-629e-41f0-bd3a-2644e336c912',
 		visible: true,
 	},
 	{
@@ -99,7 +92,7 @@ const resturantMenu: any[]= [
 		notes: 'spicy',
 		ranking: 8,
 		restaurantName: 'Sample Restaurant',
-		restaurantId: 1,
+		restaurantId: '29b70410-629e-41f0-bd3a-2644e336c912',
 		visible: true,
 	},
 	{
@@ -121,7 +114,7 @@ const resturantMenu: any[]= [
 		notes: 'vegetarian',
 		ranking: 1,
 		restaurantName: 'Sample Restaurant',
-		restaurantId: 1,
+		restaurantId: '29b70410-629e-41f0-bd3a-2644e336c912',
 		visible: true,
 	},
 	{
@@ -149,7 +142,7 @@ const resturantMenu: any[]= [
 		notes: 'vegetarian',
 		ranking: 2,
 		restaurantName: 'Sample Restaurant',
-		restaurantId: 1,
+		restaurantId: '29b70410-629e-41f0-bd3a-2644e336c912',
 		visible: true,
 	},
 	{
@@ -184,7 +177,7 @@ const resturantMenu: any[]= [
 		notes: 'healthy',
 		ranking: 1,
 		restaurantName: 'Sample Restaurant',
-		restaurantId: 1,
+		restaurantId: '29b70410-629e-41f0-bd3a-2644e336c912',
 		visible: true,
 	},
 	{
@@ -225,7 +218,7 @@ const resturantMenu: any[]= [
 		notes: 'healthy',
 		ranking: 3,
 		restaurantName: 'Sample Restaurant',
-		restaurantId: 1,
+		restaurantId: '29b70410-629e-41f0-bd3a-2644e336c912',
 		visible: true,
 	},
 	{
@@ -259,7 +252,7 @@ const resturantMenu: any[]= [
 		notes: 'korean',
 		ranking: 3,
 		restaurantName: 'Sample Restaurant',
-		restaurantId: 1,
+		restaurantId: '29b70410-629e-41f0-bd3a-2644e336c912',
 		visible: true,
 	},
 	{
@@ -287,7 +280,7 @@ const resturantMenu: any[]= [
 		notes: 'kids meal',
 		ranking: 6,
 		restaurantName: 'Sample Restaurant',
-		restaurantId: 1,
+		restaurantId: '29b70410-629e-41f0-bd3a-2644e336c912',
 		visible: true,
 	},
 	{
@@ -309,7 +302,7 @@ const resturantMenu: any[]= [
 		notes: 'good stuff',
 		ranking: 1,
 		restaurantName: 'Sample Restaurant',
-		restaurantId: 1,
+		restaurantId: '29b70410-629e-41f0-bd3a-2644e336c912',
 		visible: true,
 	},
 ]
