@@ -1,6 +1,6 @@
 import * as Koa from "koa";
 import * as Router from "koa-router";
-import { getMenuItemsById, getMenuItemsByCategory, getMenuItemsByItemType} from "./get-menu-items";
+import { getMenuItemsByRestaurant, getMenuItemsByCategory, getMenuItemsByItemType} from "./get-menu-items-dynamo";
 
 
 var app = new Koa();
@@ -13,16 +13,20 @@ router.get('/', async (ctx, next) => {
 });
 
 router.get('/menu/:id', async(ctx:Koa.Context) =>{
-  let resturantId = ctx.params.id;
-  console.log("in get menu call params id value: "+resturantId);
-  if (ctx.params.category != null && ctx.params.itemType==null){
-    ctx.body=getMenuItemsByCategory(resturantId, ctx.params.category)
+  let restaurantId = ctx.params.id;
+  console.log("in get menu call params id value: "+restaurantId);
+  let category=ctx.request.query.category;
+  let itemType=ctx.request.query.itemType;
+  console.log("category= ", category);
+  console.log("itemType= ", itemType);
+  if (category != null && itemType==null){
+    ctx.body=await getMenuItemsByCategory(restaurantId, category);
   }
   else if (ctx.params.itemType!=null){
-    ctx.body=getMenuItemsByItemType(resturantId, ctx.params.itemType);
+    ctx.body=await getMenuItemsByItemType(restaurantId, itemType);
   }
   else{
-    ctx.body=getMenuItemsById(resturantId)
+    ctx.body=await getMenuItemsByRestaurant(restaurantId);
   }  
 });
 

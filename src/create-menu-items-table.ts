@@ -4,9 +4,9 @@ dotenv.config()
 
 const AWS_ACCESS_KEY_ID = process.env.REACT_APP_AWS_ACCESS_KEY_ID;
 const AWS_SECRET_ACCESS_KEY = process.env.REACT_APP_AWS_SECRET_ACCESS_KEY;
-const AWS_S3_BUCKET = process.env.REACT_APP_AWS_S3_BUCKET;
+//const AWS_S3_BUCKET = process.env.REACT_APP_AWS_S3_BUCKET;
 const AWS_S3_REGION = process.env.REACT_APP_AWS_S3_REGION;
-var AWS = require("aws-sdk");
+var AWS = require('aws-sdk');
 AWS.config.update({
   region: AWS_S3_REGION,
   accessKeyId: AWS_ACCESS_KEY_ID,
@@ -16,31 +16,33 @@ AWS.config.update({
 function createMenuItemsTable() {
   const dynamoClient = new AWS.DynamoDB({ region: AWS_S3_REGION })
   const table = {
-    TableName: "MenuItems",
+    TableName: 'MenuItems',
     AttributeDefinitions: [
       {
-        AttributeName: "id",
-        AttributeType: "S",
+        AttributeName: 'id',
+        AttributeType: 'S',
       },
     ],
     KeySchema: [
       {
-        AttributeName: "id",
-        KeyType: "HASH",
+        AttributeName: 'id',
+        KeyType: 'HASH',
       },
     ],
-    BillingMode: "PAY_PER_REQUEST",
+    BillingMode: 'PAY_PER_REQUEST',
   };
   dynamoClient.createTable(table, function (err, data) {
     if (err) {
-      console.error("Unable to create table. Error JSON:", JSON.stringify(err, null, 2));
+      console.error('Unable to create table. Error JSON:', JSON.stringify(err, null, 2));
     } else {
-      console.log("Created table. Table description JSON:", JSON.stringify(data, null, 2));
+      console.log('Created table. Table description JSON:', JSON.stringify(data, null, 2));
     }
   });
 }
 
 function addMenuItemsForSampleResturant() {
+  let restaurantId=uuidv4().substring(0,4);
+  console.log('resturantId:', restaurantId)
   const dynamoClient = new AWS.DynamoDB.DocumentClient({ region: AWS_S3_REGION })
   dynamoClient.batchWrite({
     RequestItems: {
@@ -49,7 +51,7 @@ function addMenuItemsForSampleResturant() {
           Item: {
             name: 'sesame chicken',
             imagePath: 'imagePath1.jpg',
-            id: uuidv4(),
+            id: uuidv4().substring(0,4),
             description: 'Chicken breast with savory sweet soy sauce glaze topped with sesame seeds.',
             price: 11.99,
             ingredients: [
@@ -65,7 +67,7 @@ function addMenuItemsForSampleResturant() {
             notes: 'Specialty item of the restaurant, frequenty goes out of stock, seasonal item',
             ranking: 1,
             restaurantName: 'Sample Resturant',
-            restaurantId: '29b70410-629e-41f0-bd3a-2644e336c912',
+            restaurantId: restaurantId,
             visible: true,
           }
         }
@@ -75,7 +77,7 @@ function addMenuItemsForSampleResturant() {
           Item: {
             name: 'lemon chicken',
             imagePath: 'imagePath2.jpg',
-            id: uuidv4(),
+            id: uuidv4().substring(0,4),
             description: 'Chicken breast seasoned with lemons.',
             price: 11.99,
             ingredients: [
@@ -97,7 +99,7 @@ function addMenuItemsForSampleResturant() {
             notes: 'Lemons are fanstastic. Allergies to peanuts',
             ranking: 2,
             restaurantName: 'Sample Restaurant',
-            restaurantId: '29b70410-629e-41f0-bd3a-2644e336c912',
+            restaurantId: restaurantId,
             visible: true,
           }
         }
@@ -107,7 +109,7 @@ function addMenuItemsForSampleResturant() {
           Item: {
             name: 'kentucky fried chicken',
             imagePath: 'imagePath3.jpg',
-            id: uuidv4(),
+            id: uuidv4().substring(0,4),
             description: 'Oven fried chicken, crunchy',
             price: 13.99,
             ingredients: [
@@ -123,7 +125,7 @@ function addMenuItemsForSampleResturant() {
             notes: 'fried, spicy',
             ranking: 3,
             restaurantName: 'Sample Resturant',
-            restaurantId: '29b70410-629e-41f0-bd3a-2644e336c912',
+            restaurantId: restaurantId,
             visible: true,
           }
         }
@@ -133,7 +135,7 @@ function addMenuItemsForSampleResturant() {
           Item: {
             name: 'buffalo wild wings',
             imagePath: 'imagePath4.jpg',
-            id: uuidv4(),
+            id: uuidv4().substring(0,4),
             description: 'fried chicken wings seasoned with uber spicy sauce',
             price: 12.99,
             ingredients: [
@@ -149,7 +151,7 @@ function addMenuItemsForSampleResturant() {
             notes: 'spicy',
             ranking: 8,
             restaurantName: 'Sample Restaurant',
-            restaurantId: '29b70410-629e-41f0-bd3a-2644e336c912',
+            restaurantId: restaurantId,
             visible: true,
           }
         }
@@ -159,7 +161,7 @@ function addMenuItemsForSampleResturant() {
           Item: {
             name: 'egg foo yung',
             imagePath: 'imagePath5.jpg',
-            id: uuidv4(),
+            id: uuidv4().substring(0,4),
             description: 'egg with cucumbers. No meat, Soy sauce flavoring',
             price: 9.99,
             ingredients: [
@@ -181,7 +183,7 @@ function addMenuItemsForSampleResturant() {
             notes: 'vegetarian',
             ranking: 2,
             restaurantName: 'Sample Restaurant',
-            restaurantId: '29b70410-629e-41f0-bd3a-2644e336c912',
+            restaurantId: restaurantId,
             visible: true,
           }
         }
@@ -191,7 +193,7 @@ function addMenuItemsForSampleResturant() {
           Item: {
             name: 'eggplant with fish sauce',
             imagePath: 'imagePath10.jpg',
-            id: uuidv4(),
+            id: uuidv4().substring(0,4),
             price: 10.99,
             description: 'eggplant with fish sauce, soy sauce, sweet and savory',
             ingredients: [
@@ -207,7 +209,7 @@ function addMenuItemsForSampleResturant() {
             notes: 'vegetarian',
             ranking: 1,
             restaurantName: 'Sample Restaurant',
-            restaurantId: '29b70410-629e-41f0-bd3a-2644e336c912',
+            restaurantId: restaurantId,
             visible: true,
           }
         }
@@ -217,7 +219,7 @@ function addMenuItemsForSampleResturant() {
           Item: {
             name: 'ceasar salad',
             imagePath: 'imagePath6.jpg',
-            id: uuidv4(),
+            id: uuidv4().substring(0,4),
             description:
               'Spinach and lettuce salad with grilled chicken. Ceasar dressing',
             price: 10.99,
@@ -246,7 +248,7 @@ function addMenuItemsForSampleResturant() {
             notes: 'healthy',
             ranking: 1,
             restaurantName: 'Sample Restaurant',
-            restaurantId: '29b70410-629e-41f0-bd3a-2644e336c912',
+            restaurantId: restaurantId,
             visible: true,
           }
         }
@@ -256,7 +258,7 @@ function addMenuItemsForSampleResturant() {
           Item: {
             name: 'mediterranean salad',
             imagePath: 'imagePath7.jpg',
-            id: uuidv4(),
+            id: uuidv4().substring(0,4),
             description:
               'Spinach and lettuce salad with chicken. mediterranean items added. olives, pickles, grapes',
             price: 10.99,
@@ -291,7 +293,7 @@ function addMenuItemsForSampleResturant() {
             notes: 'healthy',
             ranking: 3,
             restaurantName: 'Sample Restaurant',
-            restaurantId: '29b70410-629e-41f0-bd3a-2644e336c912',
+            restaurantId: restaurantId,
             visible: true,
           }
         }
@@ -301,7 +303,7 @@ function addMenuItemsForSampleResturant() {
           Item: {
             name: 'ban mi',
             imagePath: 'imagePath8.jpg',
-            id: uuidv4(),
+            id: uuidv4().substring(0,4),
             description: 'korean sandwich with pork belly and lettuce',
             price: 13.99,
             ingredients: [
@@ -329,7 +331,7 @@ function addMenuItemsForSampleResturant() {
             notes: 'korean',
             ranking: 3,
             restaurantName: 'Sample Restaurant',
-            restaurantId: '29b70410-629e-41f0-bd3a-2644e336c912',
+            restaurantId: restaurantId,
             visible: true,
           }
         }
@@ -339,7 +341,7 @@ function addMenuItemsForSampleResturant() {
           Item: {
             name: 'hot dog',
             imagePath: 'imagePath11.jpg',
-            id: uuidv4(),
+            id: uuidv4().substring(0,4),
             description: 'hot dog',
             price: 5.99,
             ingredients: [
@@ -361,7 +363,7 @@ function addMenuItemsForSampleResturant() {
             notes: 'kids meal',
             ranking: 6,
             restaurantName: 'Sample Restaurant',
-            restaurantId: '29b70410-629e-41f0-bd3a-2644e336c912',
+            restaurantId: restaurantId,
             visible: true,
           }
         }
@@ -371,7 +373,7 @@ function addMenuItemsForSampleResturant() {
           Item: {
             name: 'steak',
             imagePath: 'imagePath9.jpg',
-            id: uuidv4(),
+            id: uuidv4().substring(0,4),
             description: 'medium rare steak flavored with chicago seasoning',
             price: 19.99,
             ingredients: [
@@ -387,19 +389,19 @@ function addMenuItemsForSampleResturant() {
             notes: 'good stuff',
             ranking: 1,
             restaurantName: 'Sample Restaurant',
-            restaurantId: '29b70410-629e-41f0-bd3a-2644e336c912',
+            restaurantId: restaurantId,
             visible: true,
           }
         }
       }]
     }
   }).promise()
-    .then(data => console.log("data attributes: ", data.Attributes))
+    .then(data => console.log('data attributes: ', data.Attributes))
     .catch(console.error);
 }
 
 const run = async function () {
-  console.log("aws_region:", AWS_S3_REGION);
+  console.log('aws_region:', AWS_S3_REGION);
   //addMenuItemsForSampleResturant();
 }
 run();

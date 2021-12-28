@@ -310,8 +310,8 @@ export function getMenuItemsById(resturantId: string){
     return resturantMenu;
 }
 
-export function getMenuItemsByCategory(resturantId: string, category: string){
-    let allItems=getMenuItemsById(resturantId);
+export async function getMenuItemsByCategory(resturantId: string, category: string){
+    let allItems=await getMenuItemsById(resturantId);
     let matchingCategoryItems;
     for (var item of allItems){
         if (item.category == category){
@@ -321,8 +321,8 @@ export function getMenuItemsByCategory(resturantId: string, category: string){
     return matchingCategoryItems;
 }
 
-export function getMenuItemsByItemType(resturantId: string, itemType:string){
-    let allItems=getMenuItemsById(resturantId);
+export async function getMenuItemsByItemType(resturantId: string, itemType:string){
+    let allItems=await getMenuItemsById(resturantId);
     let matchingItemType;
     for(var item of allItems){
         if (item.itemType==itemType){
