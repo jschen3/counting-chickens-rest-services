@@ -15,6 +15,6 @@ Rest services for the counting chickens app. Basic rest functions that put thing
 ## Getting Started
 1. npm install
 2. tsc
-3. node .
+3. npm start
 
 
