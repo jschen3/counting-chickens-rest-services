@@ -50,7 +50,7 @@ function addMenuItemsForSampleResturant() {
         PutRequest: {
           Item: {
             name: 'sesame chicken',
-            imagePath: 'imagePath1.jpg',
+            imagePath: 'sesame+chicken.jpeg',
             id: uuidv4().substring(0,4),
             description: 'Chicken breast with savory sweet soy sauce glaze topped with sesame seeds.',
             price: 11.99,
@@ -76,7 +76,7 @@ function addMenuItemsForSampleResturant() {
         PutRequest: {
           Item: {
             name: 'lemon chicken',
-            imagePath: 'imagePath2.jpg',
+            imagePath: 'lemon+chicken.jpeg',
             id: uuidv4().substring(0,4),
             description: 'Chicken breast seasoned with lemons.',
             price: 11.99,
@@ -108,7 +108,7 @@ function addMenuItemsForSampleResturant() {
         PutRequest: {
           Item: {
             name: 'kentucky fried chicken',
-            imagePath: 'imagePath3.jpg',
+            imagePath: 'kentucky+fried+chicken.jpeg',
             id: uuidv4().substring(0,4),
             description: 'Oven fried chicken, crunchy',
             price: 13.99,
@@ -134,7 +134,7 @@ function addMenuItemsForSampleResturant() {
         PutRequest: {
           Item: {
             name: 'buffalo wild wings',
-            imagePath: 'imagePath4.jpg',
+            imagePath: 'barbecue+chicken+thigh.jpg',
             id: uuidv4().substring(0,4),
             description: 'fried chicken wings seasoned with uber spicy sauce',
             price: 12.99,
@@ -160,7 +160,7 @@ function addMenuItemsForSampleResturant() {
         PutRequest: {
           Item: {
             name: 'egg foo yung',
-            imagePath: 'imagePath5.jpg',
+            imagePath: 'egg+foo+young.jpg',
             id: uuidv4().substring(0,4),
             description: 'egg with cucumbers. No meat, Soy sauce flavoring',
             price: 9.99,
@@ -192,7 +192,7 @@ function addMenuItemsForSampleResturant() {
         PutRequest: {
           Item: {
             name: 'eggplant with fish sauce',
-            imagePath: 'imagePath10.jpg',
+            imagePath: 'eggplant-fishsauce.jpg',
             id: uuidv4().substring(0,4),
             price: 10.99,
             description: 'eggplant with fish sauce, soy sauce, sweet and savory',
@@ -218,7 +218,7 @@ function addMenuItemsForSampleResturant() {
         PutRequest: {
           Item: {
             name: 'ceasar salad',
-            imagePath: 'imagePath6.jpg',
+            imagePath: 'ceasar+salad.jpg',
             id: uuidv4().substring(0,4),
             description:
               'Spinach and lettuce salad with grilled chicken. Ceasar dressing',
@@ -257,7 +257,7 @@ function addMenuItemsForSampleResturant() {
         PutRequest: {
           Item: {
             name: 'mediterranean salad',
-            imagePath: 'imagePath7.jpg',
+            imagePath: 'mediterranean+salad.jpeg',
             id: uuidv4().substring(0,4),
             description:
               'Spinach and lettuce salad with chicken. mediterranean items added. olives, pickles, grapes',
@@ -302,7 +302,7 @@ function addMenuItemsForSampleResturant() {
         PutRequest: {
           Item: {
             name: 'ban mi',
-            imagePath: 'imagePath8.jpg',
+            imagePath: 'banh+mi.jpg',
             id: uuidv4().substring(0,4),
             description: 'korean sandwich with pork belly and lettuce',
             price: 13.99,
@@ -340,7 +340,7 @@ function addMenuItemsForSampleResturant() {
         PutRequest: {
           Item: {
             name: 'hot dog',
-            imagePath: 'imagePath11.jpg',
+            imagePath: 'hot+dog.png',
             id: uuidv4().substring(0,4),
             description: 'hot dog',
             price: 5.99,
@@ -372,7 +372,7 @@ function addMenuItemsForSampleResturant() {
         PutRequest: {
           Item: {
             name: 'steak',
-            imagePath: 'imagePath9.jpg',
+            imagePath: 'steak.jpg',
             id: uuidv4().substring(0,4),
             description: 'medium rare steak flavored with chicago seasoning',
             price: 19.99,

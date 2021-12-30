@@ -1,7 +1,7 @@
 const resturantMenu: any[]= [
 	{
 		name: 'sesame chicken',
-		imagePath: 'imagePath1.jpg',
+		imagePath: 'sesame+chicken.jpeg',
 		id: 1,
 		description:
 			'Chicken breast with savory sweet soy sauce glaze topped with sesame seeds.',
@@ -25,7 +25,7 @@ const resturantMenu: any[]= [
 	},
 	{
 		name: 'lemon chicken',
-		imagePath: 'imagePath2.jpg',
+		imagePath: 'lemon+chicken.jpeg',
 		id: 2,
 		description: 'Chicken breast seasoned with lemons.',
 		price: 11.99,
@@ -53,7 +53,7 @@ const resturantMenu: any[]= [
 	},
 	{
 		name: 'kentucky fried chicken',
-		imagePath: 'imagePath3.jpg',
+		imagePath: 'kentucky+fried+chicken.jpeg',
 		id: 3,
 		description: 'Oven fried chicken, crunchy',
 		price: 13.99,
@@ -75,7 +75,7 @@ const resturantMenu: any[]= [
 	},
 	{
 		name: 'buffalo wild wings',
-		imagePath: 'imagePath4.jpg',
+		imagePath: 'barbecue+chicken+thigh.jpg.jpg',
 		id: 4,
 		description: 'fried chicken wings seasoned with uber spicy sauce',
 		price: 12.99,
@@ -97,7 +97,7 @@ const resturantMenu: any[]= [
 	},
 	{
 		name: 'eggplant with fish sauce',
-		imagePath: 'imagePath10.jpg',
+		imagePath: 'eggplant-fishsauce.jpg',
 		id: 10,
 		price: 10.99,
 		description: 'eggplant with fish sauce, soy sauce, sweet and savory',
@@ -119,7 +119,7 @@ const resturantMenu: any[]= [
 	},
 	{
 		name: 'egg foo yung',
-		imagePath: 'imagePath5.jpg',
+		imagePath: 'egg+foo+young.jpg',
 		id: 5,
 		description: 'egg with cucumbers. No meat, Soy sauce flavoring',
 		price: 9.99,
@@ -147,7 +147,7 @@ const resturantMenu: any[]= [
 	},
 	{
 		name: 'ceasar salad',
-		imagePath: 'imagePath6.jpg',
+		imagePath: 'ceasar+salad.jpg',
 		id: 6,
 		description:
 			'Spinach and lettuce salad with grilled chicken. Ceasar dressing',
@@ -182,7 +182,7 @@ const resturantMenu: any[]= [
 	},
 	{
 		name: 'mediterranean salad',
-		imagePath: 'imagePath7.jpg',
+		imagePath: 'mediterranean+salad.jpeg',
 		id: 7,
 		description:
 			'Spinach and lettuce salad with chicken. mediterranean items added. olives, pickles, grapes',
@@ -223,7 +223,7 @@ const resturantMenu: any[]= [
 	},
 	{
 		name: 'ban mi',
-		imagePath: 'imagePath8.jpg',
+		imagePath: 'banh+mi.jpg',
 		id: 8,
 		description: 'korean sandwich with pork belly and lettuce',
 		price: 13.99,
@@ -257,7 +257,7 @@ const resturantMenu: any[]= [
 	},
 	{
 		name: 'hot dog',
-		imagePath: 'imagePath11.jpg',
+		imagePath: 'hot+dog.png',
 		id: 11,
 		description: 'hot dog',
 		price: 5.99,
@@ -285,7 +285,7 @@ const resturantMenu: any[]= [
 	},
 	{
 		name: 'steak',
-		imagePath: 'imagePath9.jpg',
+		imagePath: 'steak.jpg',
 		id: 9,
 		description: 'medium rare steak flavored with chicago seasoning',
 		price: 19.99,
